@@ -1,0 +1,8 @@
+.ipynb_checkpoints
+env
+uniref90_fungal.fasta.gz
+clusters.tsv
+effector_homologues.fasta
+effector_homologues.tsv
+localised.tsv
+proteomes.tsv
