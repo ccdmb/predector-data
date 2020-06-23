@@ -79,7 +79,7 @@ A number of scripts in this directory generate the training/test datasets.
 Steps 1-4 are run without arguments, but scripts can be modified if the names don't match up.
 
 - `01-enrich_effectors.sh` finds effector homologues in the uniref90 dataset using mmseqs2.
-- `02-process_secretome.sh` combines the secreted and non-secreted sets.
+- `02-process_secretome.sh` combines and labels the secreted and non-secreted swissprot sets.
 - `03-process_proteomes.sh` combines the proteomes and prepends the isolate names to the protein sequence ids.
-- `04-reduce_homology.sh` Combines all of the sequences, and clusters the proteins to remove redundancy using MMSeqs2. We cluster to a minimum sequence identity of 30% and requiring a reciprocal coverage of 70%. I.e. both the cluster centroid and the cluster member should be covered by the alignment at least 70% of their length.
-- `05-label_data.ipynb` Generates a final combined dataset, selects cluster centroids by prioritising members in the following order known effector > known secreted > known non-secreted > proteome or effector homologue. It also completes the train-test split, retaining the same effector train-test split as EffectorP2 and setting 20% of the remaining proteins aside as a test set.
+- `04-reduce_homology.sh` combines all of the sequences, and clusters the proteins to remove redundancy using MMSeqs2. We cluster to a minimum sequence identity of 30% and requiring a reciprocal coverage of 70%. I.e. both the cluster centroid and the cluster member should be covered by the alignment at least 70% of their length.
+- `05-label_data.ipynb` Generates a final combined dataset, selects cluster representative sequences by prioritising members in the following order known effector > known secreted > known non-secreted > proteome or effector homologue. It also completes the train-test split, retaining the same effector train-test split as EffectorP2 and setting 20% of the remaining proteins aside as a test set.
