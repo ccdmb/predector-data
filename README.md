@@ -1,5 +1,7 @@
 # Test and training data for predector
 
+[![DOI](https://zenodo.org/badge/272664568.svg)](https://zenodo.org/badge/latestdoi/272664568)
+
 This repository contains all data and code used to train the predector pipeline.
 We include in this set: known effectors, known secreted proteins, known non-secreted proteins, and unlabelled data from several well studied pathogens.
 
